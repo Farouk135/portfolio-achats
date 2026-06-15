@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== Sécurité ======
+       Content-Security-Policy : restreint ce que la page peut charger/exécuter.
+       Bloque l'injection de scripts externes (protection XSS de base). -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self';
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+                 font-src 'self' https://fonts.gstatic.com;
+                 img-src 'self' data:;
+                 connect-src 'self';
+                 object-src 'none';
+                 base-uri 'self';
+                 form-action 'self';
+                 frame-ancestors 'none';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#050d24" />
+
+  <title>Aya El Youssfi Alaoui — Marketing &amp; Business Development</title>
+  <meta name="description" content="Portfolio d'Aya El Youssfi Alaoui — Marketing & Business Development. M2 IAE Paris-Est, Marketing & Sales Project Manager chez KPMG. Disponible pour un CDI en septembre 2026, Île-de-France." />
+  <meta name="author" content="Aya El Youssfi Alaoui" />
+
+  <!-- Open Graph (aperçu propre lors d'un partage de lien) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aya El Youssfi Alaoui — Marketing & Business Development" />
+  <meta property="og:description" content="Marketing & Business Development. Disponible pour un CDI en septembre 2026, Île-de-France." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Lien d'évitement (accessibilité clavier) -->
+  <a class="skip-link" href="#profil">Aller au contenu</a>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Retour en haut">
+        <span class="nav__mark">A<span class="nav__mark-dot">.</span></span>
+        <span class="nav__name">Aya&nbsp;El&nbsp;Youssfi&nbsp;Alaoui</span>
+      </a>
+
+      <nav class="nav__links" id="navMenu" aria-label="Navigation principale">
+        <a href="#profil" class="nav__link">Profil</a>
+        <a href="#experience" class="nav__link">Expérience</a>
+        <a href="#formation" class="nav__link">Formation</a>
+        <a href="#competences" class="nav__link">Compétences</a>
+        <a href="#engagement" class="nav__link">Engagement</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+
+      <button class="nav__burger" id="navBurger" type="button"
+              aria-label="Ouvrir le menu" aria-controls="navMenu" aria-expanded="false">
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav__scrim" id="navScrim" hidden></div>
+
+  <main id="top">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__text reveal">
+          <p class="hero__status">
+            <span class="hero__dot" aria-hidden="true"></span>
+            Disponible — CDI septembre 2026
+          </p>
+
+          <h1 class="hero__title">
+            <span class="hero__first">Aya</span>
+            <span class="hero__last">El&nbsp;Youssfi&nbsp;Alaoui</span>
+          </h1>
+
+          <p class="hero__role">Marketing &amp; Business Development</p>
+          <p class="hero__sub">
+            M2 — IAE Paris-Est · Marketing &amp; Sales Project Manager chez KPMG
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--solid" href="#contact">Me contacter</a>
+            <a class="btn btn--ghost" id="linkedinTop" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+
+          <ul class="hero__meta" aria-label="En bref">
+            <li>Marketing</li>
+            <li>5 langues</li>
+            <li>Île-de-France</li>
+          </ul>
+        </div>
+
+        <div class="hero__media reveal" data-delay="1">
+          <div class="hero__photo-wrap">
+            <div class="hero__photo-frame">
+              <!-- Déposez votre fichier aya.jpg dans le dossier (mêmes proportions ~4:5 conseillées) -->
+              <img class="hero__photo" id="profilePhoto" src="aya.jpg"
+                   alt="Portrait d'Aya El Youssfi Alaoui" width="520" height="640" loading="eager" />
+              <span class="hero__photo-fallback" id="photoFallback" aria-hidden="true">AYA</span>
+            </div>
+            <span class="hero__badge">KPMG · La&nbsp;Défense</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#profil" aria-label="Défiler vers le profil">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============================ PROFIL ============================ -->
+    <section class="section" id="profil">
+      <div class="container">
+        <p class="section__index reveal">01 — Profil</p>
+        <div class="profil__grid">
+          <h2 class="section__title profil__lead reveal">
+            Un marketing piloté par la donnée, orienté résultat et collaboration.
+          </h2>
+          <div class="profil__body reveal" data-delay="1">
+            <p>
+              Chargée de projets marketing et business development, je conjugue
+              l'expertise CRM (Salesforce, Pardot), le pilotage de campagnes
+              orientées performance, l'analyse business et le développement de
+              stratégies marketing fondées sur la donnée.
+            </p>
+            <p>
+              J'assure également le suivi et l'analyse de la performance des
+              campagnes marketing, l'évaluation des résultats business, ainsi que
+              l'analyse des performances des sites internet afin d'identifier des
+              leviers d'optimisation et de croissance. J'interviens sur la gestion
+              de projets transverses, le reporting et la coordination des parties
+              prenantes pour garantir l'atteinte des objectifs.
+            </p>
+            <p>
+              Bilingue et polyglotte, curieuse et rigoureuse, j'aime faire
+              dialoguer les équipes autour d'objectifs clairs, allier vision
+              stratégique et exécution opérationnelle, et transformer les insights
+              en actions à forte valeur ajoutée.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats reveal" data-delay="2">
+          <div class="stat">
+            <span class="stat__num">5</span>
+            <span class="stat__label">langues parlées</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">2</span>
+            <span class="stat__label">ans d'expérience pro.</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">+3</span>
+            <span class="stat__label">engagements associatifs</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">M2</span>
+            <span class="stat__label">IAE Paris-Est</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= EXPÉRIENCE ========================= -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <p class="section__index reveal">02 — Expérience professionnelle</p>
+        <h2 class="section__title reveal">Parcours</h2>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Cheffe de projets Marketing &amp; Transition</h3>
+              <span class="timeline__org">KPMG — La Défense</span>
+              <span class="timeline__date">Sept. 2024 — Sept. 2026</span>
+            </div>
+            <ul class="timeline__points">
+              <li>Optimisation du CRM Salesforce &amp; Pardot : audit, segmentation, automatisation des campagnes et création de dashboards.</li>
+              <li>Pilotage des campagnes marketing (emailings, newsletters, LinkedIn) avec reporting et analyse des performances.</li>
+              <li>Analyse de la performance des sites web et suivi des indicateurs clés (trafic, engagement, conversion) afin d'identifier des opportunités d'amélioration et de soutenir les objectifs business.</li>
+              <li>Rédaction d'articles, création de sondages et exploitation des données clients.</li>
+              <li>Gestion du catalogue de formation, optimisation SEO, mise à jour du site web et de l'intranet, guide opérationnel.</li>
+              <li>Coordination inter-équipes et veille concurrentielle.</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Assistante Marketing &amp; commerciale</h3>
+              <span class="timeline__org">G-LYTE — Hauts-de-France</span>
+              <span class="timeline__date">Mars 2024 — Juil. 2024</span>
+            </div>
+            <ul class="timeline__points">
+              <li>Gestion et développement du site web — création de contenu — LinkedIn.</li>
+              <li>Prospection, emailing, commercialisation.</li>
+              <li>Création des visuels et étude de marché.</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Assistante — Registre de commerce</h3>
+              <span class="timeline__org">Fès, Maroc</span>
+              <span class="timeline__date">Juin 2023 — Juil. 2023</span>
+            </div>
+            <ul class="timeline__points">
+              <li>Enregistrement des nouvelles entreprises.</li>
+              <li>Gestion des dossiers d'entreprise dans le registre de commerce.</li>
+              <li>Tenue de registres précis et organisation des documents administratifs.</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Assistante comptable</h3>
+              <span class="timeline__org">Alpha Expertise — Fès</span>
+              <span class="timeline__date">Juil. 2022 — Sept. 2022</span>
+            </div>
+            <ul class="timeline__points">
+              <li>Saisie et suivi comptable, organisation des pièces et classement.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================= FORMATION ========================= -->
+    <section class="section" id="formation">
+      <div class="container">
+        <p class="section__index reveal">03 — Formation</p>
+        <h2 class="section__title reveal">Diplômes &amp; études</h2>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__year">2025 — 2026</span>
+            <h3 class="card__title">Master 2 Marketing, Vente — Business Development</h3>
+            <p class="card__org">IAE Paris-Est</p>
+          </article>
+          <article class="card reveal" data-delay="1">
+            <span class="card__year">2024 — 2025</span>
+            <h3 class="card__title">Master 1 Marketing, Vente — Parcours COMET</h3>
+            <p class="card__org">IAE Lyon (Jean Moulin)</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__year">2023 — 2024</span>
+            <h3 class="card__title">Licence 3 Économie Gestion — Marketing, Vente</h3>
+            <p class="card__org">IAE Amiens</p>
+          </article>
+          <article class="card reveal" data-delay="1">
+            <span class="card__year">2021 — 2023</span>
+            <h3 class="card__title">Classes préparatoires aux grandes écoles — ECG</h3>
+            <p class="card__org">Lycée Moulay Ismaïl</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== COMPÉTENCES ======================== -->
+    <section class="section section--alt" id="competences">
+      <div class="container">
+        <p class="section__index reveal">04 — Compétences</p>
+        <h2 class="section__title reveal">Savoir-faire &amp; langues</h2>
+
+        <!-- Hard skills regroupés par domaine (lecture plus rapide en entretien) -->
+        <div class="skillset reveal">
+          <div class="skillgroup">
+            <h3 class="skillgroup__head">CRM &amp; marketing automation</h3>
+            <div class="tags">
+              <span class="tag">Salesforce</span>
+              <span class="tag">Pardot</span>
+              <span class="tag">HubSpot</span>
+              <span class="tag">Odoo</span>
+            </div>
+          </div>
+
+          <div class="skillgroup">
+            <h3 class="skillgroup__head">Data, analytics &amp; SEO</h3>
+            <div class="tags">
+              <span class="tag">Google Analytics</span>
+              <span class="tag">Piano Analytics</span>
+              <span class="tag">SEO Quantum</span>
+              <span class="tag">SEO</span>
+            </div>
+          </div>
+
+          <div class="skillgroup">
+            <h3 class="skillgroup__head">Médias &amp; acquisition</h3>
+            <div class="tags">
+              <span class="tag">Google Ads</span>
+              <span class="tag">Meta Business</span>
+              <span class="tag">LinkedIn Ads</span>
+            </div>
+          </div>
+
+          <div class="skillgroup">
+            <h3 class="skillgroup__head">Gestion &amp; bureautique</h3>
+            <div class="tags">
+              <span class="tag">Training Orchestra</span>
+              <span class="tag">Upility</span>
+              <span class="tag">Pack Office</span>
+              <span class="tag">Google Workspace</span>
+            </div>
+          </div>
+
+          <div class="skillgroup">
+            <h3 class="skillgroup__head">Création &amp; design</h3>
+            <div class="tags">
+              <span class="tag">Canva</span>
+              <span class="tag">Photoshop</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">After Effects</span>
+              <span class="tag">Premiere Pro</span>
+            </div>
+          </div>
+
+          <div class="skillgroup">
+            <h3 class="skillgroup__head">Soft skills</h3>
+            <div class="tags">
+              <span class="tag tag--soft">Leadership</span>
+              <span class="tag tag--soft">Autonomie &amp; adaptabilité</span>
+              <span class="tag tag--soft">Communication</span>
+              <span class="tag tag--soft">Esprit d'équipe</span>
+              <span class="tag tag--soft">Gestion du stress</span>
+              <span class="tag tag--soft">Proactivité &amp; créativité</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="langs reveal" data-delay="1">
+          <h3 class="skillgroup__head">Langues</h3>
+          <div class="langs__grid">
+            <div class="lang">
+              <div class="lang__row"><span>Français</span><span class="lang__lvl">Bilingue</span></div>
+              <div class="lang__bar"><i style="--w:100%"></i></div>
+            </div>
+            <div class="lang">
+              <div class="lang__row"><span>Arabe</span><span class="lang__lvl">Langue maternelle</span></div>
+              <div class="lang__bar"><i style="--w:100%"></i></div>
+            </div>
+            <div class="lang">
+              <div class="lang__row"><span>Anglais</span><span class="lang__lvl">Courant</span></div>
+              <div class="lang__bar"><i style="--w:85%"></i></div>
+            </div>
+            <div class="lang">
+              <div class="lang__row"><span>Turc</span><span class="lang__lvl">Intermédiaire</span></div>
+              <div class="lang__bar"><i style="--w:55%"></i></div>
+            </div>
+            <div class="lang">
+              <div class="lang__row"><span>Italien</span><span class="lang__lvl">Notions</span></div>
+              <div class="lang__bar"><i style="--w:30%"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= ENGAGEMENT ========================= -->
+    <section class="section" id="engagement">
+      <div class="container">
+        <p class="section__index reveal">05 — Engagement extra-professionnel</p>
+        <h2 class="section__title reveal">Au-delà du bureau</h2>
+
+        <div class="cards cards--3">
+          <article class="card reveal">
+            <span class="card__year">Déc. 2024 — Sept. 2025</span>
+            <h3 class="card__title">Community Manager</h3>
+            <p class="card__org">L'Orangerie M&amp;K</p>
+          </article>
+          <article class="card reveal" data-delay="1">
+            <span class="card__year">Déc. 2023 — Juil. 2024</span>
+            <h3 class="card__title">Community Manager</h3>
+            <p class="card__org">Association des ALUMNI</p>
+          </article>
+          <article class="card reveal" data-delay="2">
+            <span class="card__year">Déc. 2021 — Juin 2023</span>
+            <h3 class="card__title">Responsable communication</h3>
+            <p class="card__org">Club CSMS</p>
+          </article>
+        </div>
+
+        <div class="interests reveal">
+          <h3 class="skillgroup__head">Centres d'intérêt</h3>
+          <div class="tags">
+            <span class="tag tag--soft">Édition &amp; création de contenu</span>
+            <span class="tag tag--soft">Apprentissage des langues</span>
+            <span class="tag tag--soft">Lecture</span>
+            <span class="tag tag--soft">Sport</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== CONTACT ========================== -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <p class="section__index reveal">06 — Contact</p>
+        <h2 class="section__title reveal">Discutons de votre prochain projet.</h2>
+        <p class="contact__lead reveal" data-delay="1">
+          Disponible pour un CDI à partir de septembre 2026, en Île-de-France.
+        </p>
+
+        <div class="contact__grid reveal" data-delay="1">
+          <!-- Coordonnées assemblées par JavaScript pour limiter la collecte
+               automatique par des robots (anti-spam). -->
+          <a class="contact__item" id="contactEmail" href="#" rel="noopener noreferrer">
+            <span class="contact__label">Email</span>
+            <span class="contact__value">Chargement…</span>
+          </a>
+          <a class="contact__item" id="contactPhone" href="#">
+            <span class="contact__label">Téléphone</span>
+            <span class="contact__value">Chargement…</span>
+          </a>
+          <a class="contact__item" id="contactLinkedin" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__value">El Youssfi Alaoui Aya</span>
+          </a>
+          <div class="contact__item contact__item--static">
+            <span class="contact__label">Localisation</span>
+            <span class="contact__value">Paris · Île-de-France</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Aya El Youssfi Alaoui</span>
+      <a class="footer__top" href="#top">Haut de page ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
